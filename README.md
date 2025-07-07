@@ -71,8 +71,17 @@ A simple DDPM (an MLP of TimeLinear layers) learns to recover the heart‐shaped
 
 Trained on **64×64** AFHQ (cats, dogs, wildlife) for **100 000** steps on an **NVIDIA RTX 3060** (≈28 h).
 
+<p align="left">
+  <img
+    src="image_diffusion_todo/results/8_final_samples/training_done_100k.png"
+    alt="100k_training"
+    width="100%"
+  />
+</p>
 
-**Random Samples (8 first)**  
+
+
+**Final Inference Samples (first 8)**  
 
 <p align="left">
   <img
