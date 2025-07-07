@@ -106,12 +106,12 @@ Trained on **64×64** AFHQ (cats, dogs, wildlife) for **100 000** steps on an **
    pip install -r requirements.txt
    ```
 
-2. ** 2D diffusion
+2. **2D diffusion**
    ```bash
    cd 2d_plot_diffusion_todo
    jupyter notebook ddpm_tutorial.ipynb
    ```
-3. ** AFHQ image diffuison
+3. **AFHQ image diffuison**
    ```bash
    cd image_diffusion_todo
    python dataset.py
