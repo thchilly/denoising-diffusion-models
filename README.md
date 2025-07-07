@@ -1,3 +1,5 @@
+$tree
+.
 ├── 2d_plot_diffusion_todo/ # Task 1: 2D toy diffusion code & notebook
 │ ├── network.py
 │ ├── ddpm.py
