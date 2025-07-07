@@ -1,31 +1,27 @@
-$tree
+```text
 .
-├── 2d_plot_diffusion_todo/ # Task 1: 2D toy diffusion code & notebook
-│ ├── network.py
-│ ├── ddpm.py
-│ └── ddpm_tutorial.ipynb
-│
-├── image_diffusion_todo/ # Task 2: AFHQ image DDPM
-│ ├── scheduler.py
-│ ├── model.py
-│ ├── train.py
-│ ├── sampling.py
-│ └── dataset.py
-│
-├── figures/ # Final report figures
-│ ├── heart_target_prior.png
-│ ├── heart_noising.png
-│ ├── heart_loss_curve.png
-│ ├── heart_chamfer_training.png
-│ ├── heart_ddpm_samples.png
-│ ├── afhq_loss_curve.png
-│ ├── 8_samples.png
-│ └── fid_score.png
-│
-├── requirements.txt # Python dependencies
-└── README.md # You are here
-
-
+├── 2d_plot_diffusion_todo/
+│   ├── network.py
+│   ├── ddpm.py
+│   └── ddpm_tutorial.ipynb
+├── image_diffusion_todo/
+│   ├── scheduler.py
+│   ├── model.py
+│   ├── train.py
+│   ├── sampling.py
+│   └── dataset.py
+├── figures/
+│   ├── heart_target_prior.png
+│   ├── heart_noising.png
+│   ├── heart_loss_curve.png
+│   ├── heart_chamfer_training.png
+│   ├── heart_ddpm_samples.png
+│   ├── afhq_loss_curve.png
+│   ├── 8_samples.png
+│   └── fid_score.png
+├── requirements.txt
+└── README.md
+```
 ---
 
 ## 1. 2D Diffusion Experiments
@@ -56,3 +52,20 @@ Trained on **64×64** AFHQ (cats, dogs, wildlife) for **100 000** steps on an **
    conda create -n genai310 python=3.10
    conda activate genai310
    pip install -r requirements.txt
+   ```
+
+2. ** 2D diffusion
+   ```bash
+   cd 2d_plot_diffusion_todo
+   jupyter notebook ddpm_tutorial.ipynb
+   ```
+3. ** AFHQ image diffuison
+   ```bash
+4. ** 2D diffusion
+   ```bash
+   cd image_diffusion_todo
+   python dataset.py
+   python train.py --gpu 0 --train_num_steps 100000
+   python sampling.py --gpu 0 --ckpt_path results/.../last.ckpt --save_dir results/final_samples
+   python fid/measure_fid.py data/afhq/eval results/final_samples
+   ```
